@@ -1,4 +1,4 @@
-// JavaScript Document
+// JavaScript Document for Guest Functions 
 
 function updateName() { //    ----------
     // Set the new customer's name into local or session storage
