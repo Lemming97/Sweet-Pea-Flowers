@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Lindsey Martin Final Project Checkout</title>
+    <link href="layout.css" type="text/css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;600&display=swap" rel="stylesheet">
+
+    <script type="text/javascript" src="guest-functions.js"></script>
+    <script type="text/javascript" src="cart-functions.js"></script>
+    <script type="text/javascript" src="GenScript.js"></script>
+
+
+    <script>
+        window.onload = function() {
+            setGuest();
+            updateCartTotalQ();
+        }
+    </script>
+
+</head>
+
+<body>
+    <header><img src="Asset%205.png" width="760" height="208" alt="My Company" id="banner" /></header>
+    <nav>
+        <form id="form1" name="form1" method="post">
+            <p><b>Choose a page to visit:</b><br><br>
+                <select name="select" id="select" onchange="navigation();">
+                    <option value="index.html">Home</option>
+                    <option value="shop.html">Shop</option>
+                    <option value="cart.html">Cart</option>
+                    <option value="checkout.html" selected="selected">Checkout</option>
+                </select>
+            </p>
+        </form>
+
+        <p>&nbsp;</p>
+
+        <div id="divGuestArea">&nbsp;</div>
+        <p>&nbsp;</p>
+
+        <div id="divCartSummary">&nbsp;</div>
+
+    </nav>
+
+    <div id="main">
+        <h1>Checkout</h1>
+        <table id="cartTable" border="1" cellpadding="8">
+            <script>
+                showCart();
+            </script>
+        </table>
+
+        <!-- Radio Buttons for the shipping information  -->
+        <div id="form">
+            <h2>Complete the Payment Information below.</h2>
+            <form class="form-grid">
+                <form name="Ship" onSubmit="return validate()">
+
+                    <fieldset>
+                        <legend>Please choose a Shipping option:</legend>
+                        <table id="pricingTable">
+                            <tbody>
+                                <p>
+                                    <th><br><input type="radio" name="Shipping" id="free" value="0.00"><label for="free">No Shipping (Free)</label></th>
+
+                                    <th><br><input type="radio" name="Shipping" id="Standard" value="2.00"><label for="Standard">Standard Shipping($2)</label>
+                                    </th>
+
+
+                                    <th><br><input type="radio" name="Shipping" id="2day" value="5.00">
+                                        <label for="2day">2-Day Shipping ($5)</label>
+                                    </th>
+
+                                    <th><br><input type="radio" name="Shipping" id="overnight" value="10.00">
+                                        <label for="overnight">Overnight Shipping ($10)</label>
+                                    </th>
+
+                                </p>
+
+                            </tbody>
+
+                        </table>
+                        <p><br>
+                            <input type="button" value="Select Shipping" id="Shippingbutton" onclick="shippingButtons();">
+                        </p>
+                    </fieldset>
+
+                    <!-- This is hidden until the Shipping button is clicked  -->
+
+                    <!-- Contact information  -->
+                    <span id="hidding" style="display:none">
+                        <div id="formgrid">
+                            <fieldset id="CustomerInfo">
+                                <legend>Customer Information</legend>
+
+                                <table id="contactinfo">
+                                    <tbody>
+                                        <p>
+                                            <tr>
+                                                <td><label for="fullname">Full Name: </label><input type="text" name="fullname" id="fullname" class="required">&nbsp;<span id="CheckName"></span>&nbsp;</td>
+                                                <td>
+                                                    <label for="email">Email: </label><input type="email" name="email" id="email" class="required">&nbsp;<span id="CheckEmail"></span>&nbsp;
+                                                </td>
+                                                <td><label for="phone"> Phone: </label><input type="text" class="required" id="phone" name="phone" pattern="^(\+\d{1})?\(?\d{3}\)?\d{3}\d{4}$">&nbsp;<span id="CheckPhone"></span>&nbsp;</td>
+                                            </tr>
+                                        </p>
+
+                                        <p>
+                                            <tr>
+                                                <td><label for="street">Street Address: </label><input type="street" name="street" id="street" class="required">&nbsp; <span id="CheckStreet"></span>&nbsp;</td>
+                                                <td>
+
+                                                    <label for="city">City: </label><input type="city" name="city" id="city" class="required">&nbsp;<span id="CheckCity"></span>&nbsp;
+                                                </td>
+                                                <td><label for="zip">ZIP: </label><input type="zip" name="zip" id="zip" class="required">&nbsp; <span id="CheckZip"></span>&nbsp;</td>
+                                            </tr>
+                                        </p>
+                                        <p>
+                                            <tr>
+                                                <td><label for="state">State: </label><input type="state" name="state" id="state" class="required">&nbsp; <span id="CheckState"></span>&nbsp;</td>
+
+                                                <td><label for="country">Country: </label><input type="country" name="country" id="country" class="required">&nbsp; <span id="CheckCountry"></span>&nbsp;</td>
+                                            </tr>
+
+                                        </p>
+                                    </tbody>
+                                </table>
+
+                            </fieldset>
+                        </div>
+
+
+                        <!-- Payment Method -->
+
+                        <div id="form">
+                            <p>
+                            <fieldset>
+                                <table id="paymentinfo">
+                                    <tbody>
+                                        <legend>Payment Information</legend>
+                                        <tr>
+                                            <td>Select a payment method:
+                                                <select id="paymentMethod">
+                                                    <option value="" selected>- Choose one -</option>
+                                                    <option value="Visa">Visa Credit</option>
+                                                    <option value="Master Card">Master Card Credit</option>
+                                                    <option value="American Express">American Express Credit </option>
+                                                    <option value="Debit">Debit Card</option>
+                                                    <option value="PayPal">PayPal</option>
+
+                                                </select>&nbsp;
+                                            </td>
+                                        </tr>
+                                        <p>
+                                            <tr>
+                                                <td> <label for="creditcard">Credit Card Numer: </label><input type="text" name="creditcard" id="creditcard" class="required">&nbsp; <span id="CheckCreditCard"></span>&nbsp;
+                                                </td>
+                                            </tr>
+                                        </p>
+                                        <p>
+                                            <tr>
+                                                <td>Expiration Month:
+                                                    <select id="paymentMethod">
+                                                        <option value="" selected>- Choose one -</option>
+                                                        <option value="January">Janurary</option>
+                                                        <option value="February">February</option>
+                                                        <option value="March">March</option>
+                                                        <option value="April">April</option>
+                                                        <option value="May">May</option>
+                                                        <option value="June">June</option>
+                                                        <option value="July">July</option>
+                                                        <option value="August">August</option>
+                                                        <option value="September">September</option>
+                                                        <option value="October">October</option>
+                                                        <option value="November">November</option>
+                                                        <option value="December">December</option>
+
+                                                    </select>&nbsp;
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Expiration Year:
+                                                    <select id="paymentMethod">
+
+                                                        <option value="" selected>- Choose one -</option>
+                                                        <option value="2021">2021</option>
+                                                        <option value="2022">2022</option>
+                                                        <option value="2023">2023</option>
+                                                        <option value="2024">2024</option>
+                                                        <option value="2025">2025</option>
+                                                        <option value="2025">2025</option>
+                                                        <option value="2025">2025</option>
+                                                        <option value="2025">2025</option>
+                                                        <option value="2026">2026</option>
+                                                        <option value="2027">2027</option>
+                                                        <option value="2028">2028</option>
+                                                        <option value="2029">2029</option>
+                                                        <option value="2030">2030</option>
+
+                                                    </select>&nbsp;
+                                                    </td>
+                                            </tr>
+                                        </p>
+                                        <p><tr><img src="streamline-icon-money-watering-2@150x150.png" class="co-photo3" width="150" height="150" alt="Watering Plants with Money icons" /></tr>
+                                    </tbody>
+                                </table>
+                            </fieldset>
+                        </div>
+                        <p><br>
+                            <!-- Process Order buttons -->
+
+                            <input type="button" value="Process Order" id="Processbutton" onclick="checkInputs();" ;><span id="checkResults"></span>
+
+                        </p>
+                    </span>
+
+                </form>
+
+
+
+            </form>
+
+        </div>
+
+
+        <footer>
+            <p>Copyright&copy; 2021 Lindsey Martin.</p>
+            <p><a href="https://www.sendflowers.com/">Send Flowers</a> for Flower Images.</p>
+            <p><a href="https://streamlinehq.com/">Streamline</a> for Assets.</p>
+            <p><a href="https://www.freepik.com/">Freepik</a> for Images.</p>
+            <script>
+                date();
+            </script>
+        </footer>
+    </div>
+</body></html>
