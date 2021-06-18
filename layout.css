@@ -1,0 +1,541 @@
+@charset "UTF-8";
+
+/*
+ Styles for Final Project Layout
+*/
+
+header {
+    height: 250px;
+    /* optionally set an appropriate height for this banner area */
+}
+
+#banner {
+    margin-bottom: 20px;
+   =
+}
+
+/* Page Styles */
+body {
+    border: solid 10px #8FC493;
+    box-shadow: 8px 8px 6px rgba(0, 0, 0, .5);
+    padding: 10px;
+    background-image: url(5226644.jpg);
+    background-position: center center;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #FFFFFF;
+    color: black;
+
+}
+
+
+/*Fonts */
+h1 {
+    font-family: 'Noto Serif JP', serif;
+    margin-bottom: 0;
+
+}
+
+p {
+    /* adjust as needed  */
+    font-family: 'Noto Serif JP', serif;
+    margin-top: 5px;
+}
+
+/*Nav */
+
+nav {
+    width: 200px;
+    /* optionally set an appropriate width for this sidebar area */
+    float: left;
+    /* must float left or right to allow main content to sit next to it */
+    height: 750px;
+    /* set a height as needed if main page text is wrapping below sidebar; */
+    text-align: center;
+}
+
+select#select {
+    font-family: 'Noto Serif JP', serif;
+    margin-left: 1px;
+    box-shadow: inset 0px 1px 0px 0px #ffffff;
+    background: linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
+    background-color: #f9f9f9;
+    border-radius: 6px;
+    border: 1px solid #dcdcdc;
+    display: inline-block;
+    cursor: pointer;
+    color: #4C784F;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 6px 24px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #ffffff;
+
+
+}
+
+#select:hover {
+    background: linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
+    background-color: #e9e9e9;
+    color: #8FC493;
+}
+
+
+
+
+
+
+/*Main body */
+#main {
+    font-family: 'Noto Serif JP', serif;
+    margin-left: 260px;
+    /* Match this to nav's width above to keep content away from nav */
+}
+
+
+
+
+.co-photo {
+    float: left;
+    margin: 10px 20px 10px 0px;
+    border: 1px black solid;
+    box-shadow: -10px 7px 10px rgba(0, 0, 0, .5);
+    
+}
+
+.co-photo2 {
+    float: right;
+    margin: 10px 120px 22px 15px;
+    border: 1px black solid;
+    box-shadow: 4px 7px 4px rgba(0, 0, 0, .5);
+    
+}
+.co-photo3{
+    float: right;
+    margin: 100px 99px -100px 0px;
+    border: 1px black solid;
+    box-shadow: 4px 7px 4px rgba(0, 0, 0, .5);
+}
+
+label {
+    font-family: 'Noto Serif JP', serif;
+
+}
+
+/* Button Styles */
+
+#Checkoutbutton {
+    font-family: 'Noto Serif JP', serif;
+    margin-left: 15px;
+    box-shadow: inset 0px 1px 0px 0px #ffffff;
+    background: linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
+    background-color: #f9f9f9;
+    border-radius: 6px;
+    border: 1px solid #dcdcdc;
+    display: inline-block;
+    cursor: pointer;
+    color: #4C784F;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 6px 24px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #ffffff;
+
+
+}
+
+#Checkoutbutton:hover {
+    background: linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
+    background-color: #e9e9e9;
+    color: #8FC493;
+}
+
+#Checkoutbutton:active {
+    position: relative;
+    top: 1px;
+}
+
+
+/* Shopping Button */
+
+
+#Shoppingbutton {
+    font-family: 'Noto Serif JP', serif;
+    margin-left: 15px;
+    box-shadow: inset 0px 1px 0px 0px #ffffff;
+    background: linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
+    background-color: #f9f9f9;
+    border-radius: 6px;
+    border: 1px solid #dcdcdc;
+    display: inline-block;
+    cursor: pointer;
+    color: #4C784F;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 6px 24px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #ffffff;
+
+
+}
+
+#Shoppingbutton:hover {
+    background: linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
+    background-color: #e9e9e9;
+    color: #8FC493;
+}
+
+#Shoppingbutton:active {
+    position: relative;
+    top: 1px;
+}
+
+/* Sign in Button */
+
+#SignInbutton {
+    font-family: 'Noto Serif JP', serif;
+    margin-left: 15px;
+    box-shadow: inset 0px 1px 0px 0px #ffffff;
+    background: linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
+    background-color: #f9f9f9;
+    border-radius: 6px;
+    border: 1px solid #dcdcdc;
+    display: inline-block;
+    cursor: pointer;
+    color: #4C784F;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 6px 24px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #ffffff;
+
+}
+
+#SignInbutton:hover {
+    background: linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
+    background-color: #e9e9e9;
+    color: #8FC493;
+}
+
+#SignInbutton:active {
+    position: relative;
+    top: 1px;
+}
+
+
+
+/*Shop Button */
+
+#Shopbutton {
+    font-family: 'Noto Serif JP', serif;
+    margin-left: 15px;
+    box-shadow: inset 0px 1px 0px 0px #ffffff;
+    background: linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
+    background-color: #f9f9f9;
+    border-radius: 6px;
+    border: 1px solid #dcdcdc;
+    display: inline-block;
+    cursor: pointer;
+    color: #4C784F;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 6px 24px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #ffffff;
+}
+
+#Shopbutton:hover {
+    background: linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
+    background-color: #e9e9e9;
+    color: #8FC493;
+}
+
+#Shopbutton:active {
+    position: relative;
+    top: 1px;
+}
+
+
+/*Empty Cart Button */
+
+#Emptybutton {
+    font-family: 'Noto Serif JP', serif;
+    margin-left: 15px;
+    box-shadow: inset 0px 1px 0px 0px #ffffff;
+    background: linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
+    background-color: #f9f9f9;
+    border-radius: 6px;
+    border: 1px solid #dcdcdc;
+    display: inline-block;
+    cursor: pointer;
+    color: #4C784F;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 6px 24px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #ffffff;
+
+}
+
+#Emptybutton:hover {
+    background: linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
+    background-color: #e9e9e9;
+    color: #8FC493;
+}
+
+#Emptybutton:active {
+    position: relative;
+    top: 1px;
+}
+
+/*SignOut  Button */
+#SignOutbutton {
+    font-family: 'Noto Serif JP', serif;
+    margin-left: 15px;
+    box-shadow: inset 0px 1px 0px 0px #ffffff;
+    background: linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
+    background-color: #f9f9f9;
+    border-radius: 6px;
+    border: 1px solid #dcdcdc;
+    display: inline-block;
+    cursor: pointer;
+    color: #4C784F;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 6px 24px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #ffffff;
+}
+
+#SignOutbutton:hover {
+    background: linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
+    background-color: #e9e9e9;
+    color: #8FC493;
+}
+
+#SignOutbutton:active {
+    position: relative;
+    top: 1px;
+}
+
+
+/*Process Order Button */
+#Processbutton {
+    font-family: 'Noto Serif JP', serif;
+    margin-left: 400px;
+    box-shadow: inset 0px 1px 0px 0px #ffffff;
+    background: linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
+    background-color: #f9f9f9;
+    border-radius: 6px;
+    border: 1px solid #dcdcdc;
+    display: inline-block;
+    cursor: pointer;
+    color: #4C784F;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 6px 24px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #ffffff;
+
+}
+
+#Processbutton:hover {
+    background: linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
+    background-color: #e9e9e9;
+    color: #8FC493;
+}
+
+#Processbutton:active {
+    position: relative;
+    top: 1px;
+}
+
+/*Shipping Button */
+#Shippingbutton {
+    font-family: 'Noto Serif JP', serif;
+    margin-left: 400px;
+    align-items: center;
+    box-shadow: inset 0px 1px 0px 0px #ffffff;
+    background: linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
+    background-color: #f9f9f9;
+    border-radius: 6px;
+    border: 1px solid #dcdcdc;
+    display: inline-block;
+    cursor: pointer;
+    color: #4C784F;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 6px 24px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #ffffff;
+}
+
+#Shippingbutton:hover {
+    background: linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
+    background-color: #e9e9e9;
+    color: #8FC493;
+}
+
+#Shippingbutton:active {
+    position: relative;
+    top: 1px;
+}
+
+/*quanties */
+#q1,
+#q2,
+#q3,
+#q4 {
+    font-family: 'Noto Serif JP', serif;
+}
+
+
+
+/* Checkout form */
+
+form {
+    display: grid;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+    position: relative;
+    max-width: 350em;
+    margin: 1em auto;
+    margin-bottom: 30px;
+    color: black;
+
+}
+
+.form-grid {
+    background-color: #FFFFF2;
+    box-shadow: 3px 4px 3px rgba(0, 0, 0, .5);
+}
+
+legend {
+    font-size: 1.3em;
+}
+
+/*Check results */
+#checkResults,
+#CheckCreditCard,
+#CheckName,
+#CheckEmail,
+#CheckPhone,
+#CheckStreet,
+#CheckCity,
+#CheckZip,
+#CheckState,
+#CheckCountry {
+    color: #FF4B27;
+    font-weight: bold;
+}
+
+/*General Tables */
+table#contactinfo {
+    padding: 15px;
+    margin-bottom: 15px;
+    width: 100%;
+    
+}
+
+table#contactinfo td {
+    height: 2.25em;
+    width: 1.25em;
+    vertical-align: top;
+    margin-right: 15px;
+
+}
+
+#fullname,
+#email,
+#phone,
+#street,
+#city,
+#zip,
+#state,
+#country {
+    width: 150px;
+}
+
+#creditcard {
+    width: 250px;
+}
+
+
+
+table#paymentinfo {
+    padding: 15px;
+    margin-bottom: 15px;
+    width: 75%;
+    font-family: 'Noto Serif JP', serif;
+
+}
+
+table#paymentinfo td {
+    height: 3.45em;
+    vertical-align: top;
+    margin-right: 20px;
+
+}
+
+
+
+
+table#Shop {
+    background-color: #FFFFF2;
+    border: solid 6px #4C784F;
+    box-shadow: 3px 8px 5px rgba(0, 0, 0, .5);
+}
+
+table#cartTable {
+    background-color: #FFFFF2;
+    border: solid 6px #4C784F;
+    box-shadow: 8px 8px 6px rgba(0, 0, 0, .5);
+}
+
+
+#paymentMethod {
+    font-family: 'Noto Serif JP', serif;
+}
+
+/* Link Styles */
+
+a:link {
+    text-decoration: none;
+    color: #285C2C;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #5C3242;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #A86C83;
+    font-size: 105%;
+    font-weight: bold;
+}
+
+a,
+a:after,
+a:before {
+    transition: all .5s;
+}
+
+a:active {
+    color: #285C2C;
+
+}
+
+
+
+/* Styles for Footer */
+footer {
+    margin-top: 100px;
+    /* adjust as needed  */
+    font-family: 'Noto Serif JP', serif;
+    text-align: center;
+    font-size: 50%;
+    clear: left;
+}

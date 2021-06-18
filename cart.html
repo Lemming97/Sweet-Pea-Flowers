@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Lindsey Martin Final Project Cart</title>
+    <link href="layout.css" type="text/css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;600&display=swap" rel="stylesheet">
+
+    <script type="text/javascript" src="guest-functions.js"></script>
+    <script type="text/javascript" src="cart-functions.js"></script>
+    <script type="text/javascript" src="GenScript.js"></script>
+
+
+    <script>
+        window.onload = function() {
+            setGuest();
+            updateCartTotalQ();
+        }
+    </script>
+
+</head>
+
+<body>
+     <header><img src="Asset%205.png" width="760" height="208" alt="My Company" id="banner"/></header>
+    <nav>
+        <form id="form1" name="form1" method="post">
+            <p><b>Choose a page to visit:</b><br><br>
+                <select name="select" id="select" onchange="navigation();">
+                    <option value="index.html">Home</option>
+                    <option value="shop.html">Shop</option>
+                    <option value="cart.html" selected="selected">Cart</option>
+                    <option value="checkout.html">Checkout</option>
+                </select>
+            </p>
+        </form>
+
+        <p>&nbsp;</p>
+
+        <div id="divGuestArea">&nbsp;</div>
+        <p>&nbsp;</p>
+
+        <div id="divCartSummary">&nbsp;</div>
+    </nav>
+
+    <div id="main">
+        <h1>Cart</h1>
+        <p>Below is the current contents of your shopping cart:</p>
+
+        <table id="cartTable" border="1" cellpadding="8">
+            <script>
+                showCart();
+            </script>
+        </table>
+
+        <br><p><strong>Continue to Checkout:</strong></p>
+        <p>
+            <input type="button" value="Proceed to Checkout" id="Checkoutbutton" onclick="location.href='checkout.html';">
+            <input type="button" value="Back to Shopping" id="Shoppingbutton" onclick="location.href='shop.html';">
+
+        </p>
+
+        <footer>
+           <p>Copyright&copy; 2021 Lindsey Martin.</p>
+            <p><a href="https://www.sendflowers.com/">Send Flowers</a> for Flower Images.</p>
+            <p><a href="https://streamlinehq.com/">Streamline</a> for Assets.</p>
+            <p><a href="https://www.freepik.com/">Freepik</a> for Images.</p>
+            <script>
+                date();
+            </script>
+        </footer>
+    </div>
+</body></html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Lindsey Martin Final Project Shop</title>
+    <link href="layout.css" type="text/css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;600&display=swap" rel="stylesheet">
+
+    <style>
+        .quantity {
+            width: 55px;
+        }
+
+    </style>
+
+    <script type="text/javascript" src="guest-functions.js"></script>
+    <script type="text/javascript" src="cart-functions.js"></script>
+    <script type="text/javascript" src="GenScript.js"></script>
+
+
+    <script>
+        window.onload = function() {
+            setGuest();
+            updateCartTotalQ();
+        }
+
+
+        //prices
+        const PRICE1 = 40.00;
+        const PRICE2 = 50.00;
+        const PRICE3 = 35.00;
+        const PRICE4 = 39.00;
+
+    </script>
+
+
+</head>
+
+<body>
+    <header><img src="Asset%205.png" width="760" height="208" alt="My Company" id="banner" /></header>
+    <nav>
+        <form id="form1" name="form1" method="post">
+            <p><b>Choose a page to visit:</b><br><br>
+                <select name="select" id="select" onchange="navigation();">
+                    <option value="index.html">Home</option>
+                    <option value="shop.html" selected="selected">Shop</option>
+                    <option value="cart.html">Cart</option>
+                    <option value="checkout.html">Checkout</option>
+                </select>
+            </p>
+        </form>
+        <p>&nbsp;</p>
+
+        <div id="divGuestArea">&nbsp;</div>
+        <p>&nbsp;</p>
+
+        <div id="divCartSummary">&nbsp;</div>
+    </nav>
+
+    <div id="main">
+        <h1>Shop</h1>
+        <p>Check out our end of Spring sale! We have a variety of different bouquets available. Each arrangement can be customized as well. Simple reach out to <a href="mailto:support@test.com">Support@SweetPea.com</a></p>
+        <table border="1" cellspacing="0" cellpadding="6" id="Shop">
+            <tbody>
+                <tr id="Product1">
+                    <td><img src="https://sf.tac-cdn.net/images/products/large/FTD-C13-5036.jpg?auto=webp&quality=80" alt="flower set 1" height="250" width="250"></td>
+                    <td id="Descriptions">
+                        <h3>Pink Rose White Lily Bouquet</h3>
+                        <p>This elegant white lily flower bouquet is a classic way to show someone you care with an affordable gift. The beauty of this freshly cut flowers centerpiece will add serenity to your home. Hand-delivered from a local florist, this arrangement features light-pink rose, chrysanthemum, statice, and lily blooms. This luxury white lilies bouquet features pops of color with whisper soft pink carnation blossoms and rose selections.</p>
+                    </td>
+                    <td><b>Price:</b><br>$<script>
+                            document.write(PRICE1.toFixed(2));
+
+                        </script>
+                    </td>
+                    <td>
+                        <label for="q1"><b>Quantity:</b><br></label>
+                        <input type="number" name="q1" id="q1" class="quantity" value="1">
+                    </td>
+                    <td><img src="shopping-cart-add-1.png" width="52" height="52" alt="add to cart button" onmouseover="this.src='shopping-cart-check-2.png';" onmouseout="this.src='shopping-cart-add-1.png';" onclick="add2Cart('q1');" /><span id="Quat1"></span></td>
+                </tr>
+                <tr id="Product2">
+                    <td> <img src="https://sf.tac-cdn.net/images/products/large/SF-200.jpg?auto=webp&quality=80" alt="flower set 2" height="250" width="250"></td>
+                    <td id="Descriptions">
+                        <h3>Sunflower Mason Jar Bouquet</h3>
+                        <p>Feel as if you're walking through a field of sunflower blooms and more. This inexpensive mixed flowers bouquet will evoke sunshine that will brighten up any home or office or someone special and deserving! Warm fall hues, seasonal and fresh cut alstroemeria mix with colorful pom blossoms for a hand delivered farm inspired flower arrangement that's certain to make one smile. Both affordable and touching, it feels as though the countryside comes indoors with this display. The jar can be used afterwards for whatever your recipient wants!</p>
+                    </td>
+                    <td><b>Price:</b><br>$<script>
+                            document.write(PRICE2.toFixed(2));
+
+                        </script>
+                    </td>
+                    <td><label for="q2"><b>Quantity:</b><br></label>
+                        <input type="number" name="q2" id="q2" class="quantity" value="1">
+                    </td>
+                    <td><img src="shopping-cart-add-1.png" width="52" height="52" alt="add to cart button" onmouseover="this.src='shopping-cart-check-2.png';" onmouseout="this.src='shopping-cart-add-1.png';" onclick="add2Cart('q2');" /><span id="Quat2"></span></td>
+                </tr>
+                <tr id="Product3">
+                    <td><img src="https://sf.tac-cdn.net/images/products/large/BF224-11K.jpg?auto=webp&quality=80" alt="flower set 3" height="250" width="250"></td>
+                    <td id="Descriptions">
+                        <h3>Best Wishes Bouquet</h3>
+                        <p>Send a mixed daisy bouquet with bright crimson carnation, lavender flowers, and jade colored button pom blooms to someone special today! A sweet daisy arrangement is a great way to wish someone a happy birthday! Surprise someone for any unique occasion with a fun centerpiece adorned with ribbons in playful colors.</p>
+                    </td>
+                    <td><b>Price:</b><br>$<script>
+                            document.write(PRICE3.toFixed(2));
+
+                        </script>
+                    </td>
+                    <td><label for="q3"><b>Quantity:</b><br></label>
+                        <input type="number" name="q3" id="q3" class="quantity" value="1">
+                    </td>
+                    <td><img src="shopping-cart-add-1.png" width="52" height="52" alt="add to cart button" onmouseover="this.src='shopping-cart-check-2.png';" onmouseout="this.src='shopping-cart-add-1.png';" onclick="add2Cart('q3');" /><span id="Quat3"></span></td>
+                </tr>
+                <tr id="Product4">
+                    <td><img src="https://sf.tac-cdn.net/images/products/large/BF63-11KM-CL.jpg?auto=webp&quality=80" alt="flower set 4" height="250" width="250"></td>
+                    <td id="Descriptions">
+                        <h3>Orange Rose Arrangement</h3>
+                        <p>Add beauty and a pop of vibrant color with one of the most popular floral colors this season: bright orange flowers! In this lovely burnt-orange colored flower bouquet they'll receive spray rose and freshly cut asiatic lily mixed with greenery and hand-arranged in a clear glass vase. This truly memorable gift will liven up their day and fill them with positive energy. The warm florals used in this inexpensive arrangement are perfect to lift someone's spirit and just make them smile. Send a beautiful present for someone and let them know you care. Great for happy birthday, just because, and get well gifts.</p>
+                    </td>
+                    <td><b>Price:</b><br>$<script>
+                            document.write(PRICE4.toFixed(2));
+
+                        </script>
+                    </td>
+                    <td><label for="q4"><b>Quantity:</b><br></label>
+                        <input type="number" name="q4" id="q4" class="quantity" value="1">
+                    </td>
+                    <td><img src="shopping-cart-add-1.png" width="52" height="52" alt="add to cart button" onmouseover="this.src='shopping-cart-check-2.png';" onmouseout="this.src='shopping-cart-add-1.png';" onclick="add2Cart('q4');" /><span id="Quat4"></span></td>
+                </tr>
+                <tr>
+                    <td colspan="5" align="right">
+                        <input type="button" value="Proceed to Cart" id="Checkoutbutton" onclick="location.href='cart.html';">&nbsp; &nbsp; &nbsp;<br> <br>
+                        <input type="button" value="Empty the Cart" id="Emptybutton" onclick="clearCart();">&nbsp; &nbsp; &nbsp;
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <footer>
+            <p>Copyright&copy; 2021 Lindsey Martin.</p>
+            <p><a href="https://www.sendflowers.com/">Send Flowers</a> for Flower Images.</p>
+            <p><a href="https://streamlinehq.com/">Streamline</a> for Assets.</p>
+            <p><a href="https://www.freepik.com/">Freepik</a> for Images.</p>
+            <script>
+                date();
+
+            </script>
+        </footer>
+
+    </div>
+</body>
+
+</html>

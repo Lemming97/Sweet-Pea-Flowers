@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Lindsey Martin Final Project Home</title>
+    <link href="layout.css" type="text/css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;600&display=swap" rel="stylesheet">
+
+    <script type="text/javascript" src="guest-functions.js"></script>
+    <script type="text/javascript" src="cart-functions.js"></script>
+    <script type="text/javascript" src="GenScript.js"></script>
+
+
+    <script>
+        window.onload = function() {
+            setGuest();
+            updateCartTotalQ();
+        }
+    </script>
+
+
+</head>
+
+<body>
+    <header><img src="Asset%205.png" width="760" height="208" alt="My Company" id="banner" /></header>
+    <nav>
+        <form id="form1" name="form1" method="post">
+            <p><b>Choose a page to visit:</b><br><br>
+                <select name="select" id="select" onchange="navigation();">
+                    <option value="index.html" selected="selected">Home</option>
+                    <option value="shop.html">Shop</option>
+                    <option value="cart.html">Cart</option>
+                    <option value="checkout.html">Checkout</option>
+                </select>
+            </p>
+        </form>
+
+        <p>&nbsp;</p>
+
+        <div id="divGuestArea">&nbsp;</div>
+        <p>&nbsp;</p>
+
+        <div id="divCartSummary">&nbsp;</div>
+    </nav>
+    <div id="main">
+        <h1>Home</h1>
+        <p>Welcome to <b>Sweet Pea Flowers</b> by Lindsey Martin!</p>
+        <p><img src="streamline-icon-floral-shop@150x150.png" class="co-photo" width="200" height="200" alt="Flower Shop Icon" />
+            We are here for all your flower needs.</p>
+
+        <p>We specialize in custom flower bouquets for any occasion. We love weddings, sympathy, special occasions, Balloons, gourmet baskets, chocolates, cakes, and even espresso. We love to make your gifts unique and special. We take pride in really fresh flowers and in creating flowers that are not only creative but long-lasting! <br>We are open to online orders for delivery. For details call us. All delivery orders will be placed on the doorstep and we will ring the bell and immediately leave the address. We are not open to the public at this time just curbside pickup and delivery only.</p>
+
+        <h2>About Us</h2>
+        <p>Sweet Pea Flowers is shop is locally owned and operated and has been in business since 1991. We are family owned and operated. </p>
+        <p><img src="one-line-continuous-flower-single-line-drawing-art_190024-702.jpeg" class="co-photo2" width="200" height="200" alt="Flower Shop Icon" />
+        <p>We got our start in a small shop in downtown Seattle during the spring season. Now, we currently have more than 60 locations all across the states! We take great pride in working with local artists, and helping them establish names for themselves. We are currently looking to expand our business into hosting live music and cocktails on Thursdays! We’ll also be teaching classes on bouquet arrangements in the upcoming future. Feel free to contact our support staff for further information at <a href="mailto:support@test.com">Support@SweetPea.com</a> </p>
+        <footer>
+            <p>Copyright&copy; 2021 Lindsey Martin.</p>
+            <p><a href="https://www.sendflowers.com/">Send Flowers</a> for Flower Images.</p>
+            <p><a href="https://streamlinehq.com/">Streamline</a> for Assets.</p>
+            <p><a href="https://www.freepik.com/">Freepik</a> for Images.</p>
+            <script>
+                date();
+            </script>
+        </footer>
+    </div>
+
+
+</body></html>
