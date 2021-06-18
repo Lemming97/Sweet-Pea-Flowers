@@ -1,5 +1,5 @@
 # Sweet-Pea-Flowers
-Sweet-Pea-Flowers Martin Lindsey Final JS Project
+<b>Sweet-Pea-Flowers Martin Lindsey Final JS Project</b>
 
 Copyright&copy; 2021 Lindsey Martin
 
