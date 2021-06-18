@@ -8,8 +8,7 @@ Copyright&copy; 2021 Lindsey Martin
             <p><a href="https://www.freepik.com/">Freepik</a> for Images.</p>
 <br>
 <p><b>Includes:</b>
-
-<br>1. Non-JavaScript content – HTML, CSS, Images
+1. Non-JavaScript content – HTML, CSS, Images
 <br>2. Navigation using the given Select List
 <br>3. Login/Logout Guest/Name Management
 <br>4. Cart Management Using Local Storage or Session Storage
