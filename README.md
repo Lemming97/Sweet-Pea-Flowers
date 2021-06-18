@@ -7,7 +7,7 @@ Copyright&copy; 2021 Lindsey Martin
             <p><a href="https://streamlinehq.com/">Streamline</a> for Assets.</p>
             <p><a href="https://www.freepik.com/">Freepik</a> for Images.</p>
 
-<p><b>Includes:</b></p>
+<p><b>Includes:</b>
 
 <br>1. Non-JavaScript content – HTML, CSS, Images
 <br>2. Navigation using the given Select List
@@ -17,3 +17,4 @@ Copyright&copy; 2021 Lindsey Martin
 <br>6. Use of Objects 
 <br>7. Image Rollovers
 <br>8. Credit card validation 
+</p>
