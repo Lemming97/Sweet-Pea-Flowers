@@ -11,7 +11,7 @@ Copyright&copy; 2021 Lindsey Martin
 1. Non-JavaScript content – HTML, CSS, Images
 <br>2. Navigation using the given Select List
 <br>3. Login/Logout Guest/Name Management
-<br>4. Cart Management Using Local Storage or Session Storage
+<br>4. Cart Management Using Local Storage & Session Storage
 <br>5. Checkout Process
 <br>6. Use of Objects 
 <br>7. Image Rollovers
